@@ -1,0 +1,7 @@
+{
+  "name": "exemploWhile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

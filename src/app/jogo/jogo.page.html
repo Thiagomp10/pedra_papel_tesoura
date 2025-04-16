@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Jogo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Pedra Papel Tesoura</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-label class="label_titulo">Escolha Pedra, Papel ou Tesoura</ion-label>
+    <ion-select [(ngModel)]="escolhaNumero" placeholder="Selecione">
+      <ion-select-option value="1">1 - Pedra</ion-select-option>
+      <ion-select-option value="2">2 - Papel</ion-select-option>
+      <ion-select-option value="3">3 - Tesoura</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-button expand="full" (click)="jogar()" class="botao" shape="round" size="default"
+    color="warning">Jogar</ion-button>
+
+  <div class="exibicao_resultado">
+    <p>Você escolheu: {{ mostrarNomeEscolha(escolhaNumero) }}</p>
+    <p>PC escolheu: {{ mostrarNomeEscolhaPc(escolhaPC.toString()) }}</p>
+  </div>
+
+  <p id="resultado">Resultado: {{resultado}} </p>
+
+  <div class="placar">
+    <p>Voce: {{placarHumano }}</p>
+    <p>Computador: {{placarPc }}</p>
+    <p>Empate: {{empate }}</p>
+  </div>
+
+</ion-content>
